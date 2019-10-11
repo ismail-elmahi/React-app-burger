@@ -2,13 +2,17 @@ import React from 'react';
 import Zoom from 'react-reveal/Zoom';
 import icon_calendar from '../../resources/images/icons/calendar.png';
 import icon_location from '../../resources/images/icons/location.png';
-
+import {Container, Row, Col} from 'react-bootstrap'
 const VunueNfo = () => {
     return (
-        <div className="bck_black">
-           <div className="center_wrapper">
+        <div className="bck_black"> 
+        <Container >
+            
                <div className="vn_wrapper">
-                   <Zoom duration={500}>
+                   
+                   <Row >
+                       <Col>
+                           <Zoom duration={500}>
                    <div className="vn_item">
                        <div className="vn_outer">
                            <div className="vn_inner">
@@ -28,9 +32,10 @@ const VunueNfo = () => {
                            </div>
                        </div>
                    </div>
-                   </Zoom>
-
-                   <Zoom duration={500} delay={500}>
+                    </Zoom>
+                   </Col>
+                    <Col>
+                        <Zoom duration={500} delay={500}>
                    <div className="vn_item">
                        <div className="vn_outer">
                            <div className="vn_inner">
@@ -51,10 +56,11 @@ const VunueNfo = () => {
                        </div>
                    </div>
                    </Zoom>
-                   
-               </div>
-           </div>
-
+                   </Col>
+                   </Row>   
+                   </div>
+               
+        </Container>
         </div>
     );
 };

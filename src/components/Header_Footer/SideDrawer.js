@@ -24,7 +24,6 @@ const SideDrawer = (props) => {
          open={props.open}
          onClose={() => props.onClose(false)}
          >
-
         <List>
           <ListItem button onClick={() => scrollToElement('Events_starts_in')}>
               Events starts in

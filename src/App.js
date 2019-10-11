@@ -1,5 +1,6 @@
 import React from 'react';
-import './resources/styles.css'; 
+import './resources/styles.css';
+import './resources/responsive.css';  
 import {Element} from 'react-scroll';
 import Header from './components/Header_Footer/Header';
 import Featured from './components/Featured/index';
@@ -8,7 +9,7 @@ import Highlight from './components/Highlights/index';
 import Pricing from './components/Pricing/index';
 import Location from './components/Location/index';
 import Footer from './components/Header_Footer/Footer';
-
+import 'bootstrap/dist/css/bootstrap.min.css';
  
 function App()  {
   

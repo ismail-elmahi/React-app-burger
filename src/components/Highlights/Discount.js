@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import Fade from 'react-reveal/Fade';
 import Slide from 'react-reveal/Slide';
 import Button from '../utilis/Buttons';
-
+import {Row, Col} from 'react-bootstrap'
 
 
 class Discount extends Component {
@@ -27,17 +27,23 @@ class Discount extends Component {
   }
     render() {
         return (
-            <div className="center_wrapper">
-                <div className="discount_wrapper">
+            <div className="discount_wrapper">
+                <Row>
+                    <Col md={4} xs={12}>
                     <Fade 
                     onReveal={() => this.porcentage()}
                     >
-                    <div className="discount_porcentage">
+                    
+                    <div  className="discount_porcentage">
                         <span>{this.state.discountStart}%</span>
                         <span>OFF</span>
                     </div>
+                    
                     </Fade>
+                    </Col>
+                    <Col md={8} xs={12}>
                    <Slide right>
+                       
                    <div className="discount_description">
                         <h3>Purchase tickets before 20th JUNE</h3>
                          <p>Lorem Ipsum is simply dummy text of the printing and typesetting and we need something Lorem Ipsum is simply dummy text of the printing and typesetting</p>
@@ -48,12 +54,12 @@ class Discount extends Component {
                    color="#ffffff"
                    link="http://google.com"
                    />
-
                     </div>
-                   </Slide>
                     
-                </div>  
-            </div>
+                   </Slide>
+                   </Col>
+                   </Row>
+                   </div>
         );
     }
 }

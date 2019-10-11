@@ -1,5 +1,5 @@
 import React from 'react';
-
+import {Container, Row, Col} from 'react-bootstrap'
 const Location = () => {
     return (
         <div className="location_wrapper">
@@ -14,10 +14,8 @@ const Location = () => {
             <div className="location_tag">
              <div>Location</div>
             </div>
-
-
-
         </div>
+        
     );
 };
 

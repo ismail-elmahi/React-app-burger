@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Button from '../utilis/Buttons';
 import Zoom from 'react-reveal/Zoom'
-
+import {Container, Row, Col} from 'react-bootstrap'
 
 class Pricing extends Component {
 
@@ -19,10 +19,13 @@ class Pricing extends Component {
 
 
     showBoxes = () => (
+      
         this.state.prices.map((box,i) =>(
-            <Zoom 
-            key={i}
-            delay={this.state.delay[i]}
+           
+         <Col md={4}>
+               <Zoom 
+             key={i}
+             delay={this.state.delay[i]}
             >
             <div className="pricing_item">
                 <div className="pricing_inner_wrapper">
@@ -44,20 +47,29 @@ class Pricing extends Component {
                 </div>
             </div>
             </Zoom>
-        ))
-    )
+            </Col>
+                
+           
+         )
+         
+        )   
+    )   
+    
 
     render() {
         return (
             <div className="bck_black">
-                <div className="center_wrapper pricing_section">
+            <Container >
+                <div className="pricing_section">
                     <h2>Pricing</h2>
-                    <div className="pricing_wrapper">
-                       {this.showBoxes()}
+                    <div className="pricing_wrapper"> 
+                    <Row >
+                    {this.showBoxes()}  
+                    </Row>
+                                       
                     </div>
-
                 </div>
-                
+            </Container>
             </div>
         );
     }
