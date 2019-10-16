@@ -6,7 +6,7 @@
   /* tablet */
   @media screen and (max-width: 994px){
     .artist_name {
-        width: 330px;
+        width: 350px;
         height: 136px;
     }
     .artist_name .wrapper {
